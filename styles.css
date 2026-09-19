@@ -1,0 +1,546 @@
+/* 
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+
+/* GENERAL GUIDELINES -------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+:root {
+    --color-primary: #00022e;
+    --color-secondary: rgb(20, 41, 82);
+    --color-muted: rgba(38, 73, 110, 1);
+    --color-accent: rgb(0, 144, 158);
+    --color-light: #daf2ee;
+    --color-font: #b8ded7;
+    --color-button: #FFF3B0;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.8rem;
+    color: var(--color-font);
+    background-color: var(--color-primary);
+    padding: 0 2.4rem;
+}
+
+p {
+    margin-bottom: 1.6rem;
+    line-height: 1.5;
+}
+
+b,
+h1,
+h2,
+h3,
+h4 {
+    color: var(--color-light);
+}
+
+h1 {
+    font-size: 4.4rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.icon {
+    font-size: 2.4rem;
+}
+
+.iconSmall {
+    font-size: 1.6rem;
+}
+
+.title-small {
+    font-size: 1.8rem;
+}
+
+.title-medium {
+    font-size: 2rem;
+}
+
+.marginBottom-8 {
+    margin-bottom: 0.8rem;
+}
+
+.marginBottom-12 {
+    margin-bottom: 1.2rem;
+}
+
+.marginBottom-16 {
+    margin-bottom: 1.6rem;
+}
+
+.marginBottom-24 {
+    margin-bottom: 2.4rem;
+}
+
+.marginBottom-32 {
+    margin-bottom: 3.2rem;
+}
+
+.marginBottom-48 {
+    margin-bottom: 4.8rem;
+}
+
+.marginBottom-64 {
+    margin-bottom: 6.4rem;
+}
+
+.marginTop-64 {
+    margin-top: 6.4rem;
+}
+
+.marginBottom-80 {
+    margin-bottom: 8rem;
+}
+
+.marginBottom-96 {
+    margin-bottom: 9.6rem;
+}
+
+.marginBottom-128 {
+    margin-bottom: 12.8rem;
+}
+
+.marginTop-96 {
+    margin-top: 9.6rem;
+}
+
+.marginTop-128 {
+    margin-top: 12.8rem;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* The following are used for <a> links */
+
+.a-button {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+}
+
+.a-button:hover {
+    color: var(--color-accent);
+    cursor: pointer;
+}
+
+/* HEADER = NAVBAR + HERO -------------------------------------------------------------*/
+
+.hero {
+    padding-top: 4.8rem;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.4rem;
+    z-index: 10;
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    justify-content: center;
+}
+
+.navbar ul {
+    justify-content: space-between;
+}
+
+.cta-button {
+    all: unset;
+    font: inherit;
+    background: none;
+    border: 2px solid var(--color-light);
+    color: var(--color-light);
+    padding: 1.6rem 6.4rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
+}
+
+.cta-button:hover {
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+}
+
+.cta-button .arrow {
+    transition: transform 0.2s ease;
+}
+
+.cta-button:hover .arrow {
+    transform: translateX(9px);
+}
+
+/* SKILL SECTION -------------------------------------------------------------*/
+
+
+.skillCard {
+    display: flex;
+    gap: 2.4rem;
+}
+
+.skillCard-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github-icon {
+    flex-direction: column;
+}
+
+.skillCard-text {
+    display: flex;
+    align-items: center;
+}
+
+
+/* PROJECTS -------------------------------------------------------------*/
+
+.tec {
+    background: var(--color-muted);
+    color: #FFD166;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    padding: 0.4rem 1.2rem;
+}
+
+
+
+.project-tecnologia_ul {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+article {
+    line-height: normal;
+}
+
+.img {
+    border: 1px solid var(--color-light);
+    border-radius: 5px;
+    max-width: 70%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.project_title {
+    transition: all 0.2s ease;
+}
+
+.project_title:hover {
+    color: var(--color-accent);
+    cursor: pointer;
+}
+
+.project_title .project_title-arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.project_title:hover .project_title-arrow {
+    transform: translate(5px, -5px);
+
+}
+
+.card-figure {
+    height: 30%;
+}
+
+/* CONTACT -------------------------------------------------------------*/
+
+#contact {
+    max-width: 60rem;
+    margin: 0 auto 12.8rem auto;
+}
+
+
+.contact-ul {
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+fieldset {
+    all: unset;
+    width: 100%;
+}
+
+.form-fieldset_top {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+.form-input {
+    all: unset;
+    width: 100%;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.8rem;
+    color: var(--color-light);
+    box-sizing: border-box;
+    background: none;
+    border-bottom: 1px solid var(--color-light);
+    padding-bottom: 1.6rem;
+}
+
+textarea::placeholder,
+input::placeholder {
+    color: var(--color-light);
+}
+
+.accent {
+    color: var(--color-accent);
+}
+
+.contact-button {
+    all: unset;
+    margin: 0 0 0 auto;
+    font: inherit;
+    background: var(--color-accent);
+    border: 2px solid var(--color-light);
+    color: var(--color-light);
+    padding: 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-button:hover {
+    border: 2px solid var(--color-button);
+    color: var(--color-button);
+}
+
+.contact-button .arrow-cb {
+    transition: transform 0.2s ease;
+}
+
+.contact-button:hover .arrow-cb {
+    transform: translateX(9px);
+}
+
+/* FOOTER -------------------------------------------------------------*/
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 3.2rem;
+    font-size: 1.4rem;
+    padding: 3.2rem 0;
+}
+
+.footer-nav_ul {
+    flex-direction: column;
+}
+
+.footer-social_ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-copy {
+    font-size: 1.2rem;
+    grid-column: 1 / -1;
+}
+
+.footer-social {
+    text-align: center;
+}
+
+.footer-contact {
+    text-align: right;
+}
+
+
+/* MEDIA QUERIES -------------------------------------------------------------*/
+
+
+@media (min-width: 768px) {
+
+    html {
+        font-size: 65%;
+    }
+
+    .layout {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3.2rem;
+    }
+
+    .layout p:nth-child(1),
+    .layout p:nth-child(2) {
+        grid-column: 1;
+    }
+
+    .layout p:nth-child(3) {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .layout-cards {
+        gap: 3.2rem;
+        place-items: center;
+        align-items: stretch
+    }
+
+    .card {
+        transition: all 0.2s ease;
+        display: grid;
+        grid-template-rows: auto auto;
+        gap: 2.6rem;
+        min-width: 30rem;
+        max-width: 100%;
+        padding: 2.4rem;
+        border-radius: 5px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15),
+            0 0 10px rgba(218, 242, 238, 0.5);
+    }
+
+    .project-tecnologia {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-figure {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project_title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2.4rem;
+    }
+
+    .project-enlace {
+        margin-bottom: 2.4rem;
+    }
+
+    .img {
+        max-width: 100%;
+    }
+
+    .card:hover {
+        box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.25),
+            0 0 20px rgba(218, 242, 238, 0.7);
+
+        transform: translateY(-5px);
+    }
+
+    .marginBottom-64 {
+        margin-bottom: 0;
+    }
+
+    #contact{
+        padding-top: 3.2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    html {
+        font-size: 67.5%;
+    }
+
+    .layout {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 3.2rem;
+    }
+
+    .layout p:nth-child(1) {
+        grid-column: 1;
+    }
+
+    .layout p:nth-child(2) {
+        grid-column: 2;
+    }
+
+    .layout p:nth-child(3) {
+        grid-column: 3;
+    }
+
+    .card {
+        min-width: 27rem;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    html {
+        font-size: 70%;
+    }
+
+    .main-container,
+    .ul-navbar {
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+}
